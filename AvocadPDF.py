@@ -34,7 +34,7 @@ def start_init():
 def create_pdf():
     iKompasDocument = iApplication.ActiveDocument
     # Проверяем, что это чертёж, фрагмент или спецификация
-    if iKompasDocument and iKompasDocument.DocumentType in (1,4):
+    if iKompasDocument and iKompasDocument.DocumentType in range(1,4):
         doc_filename = iKompasDocument.PathName # Получаем путь к файлу
         pdf_filename = doc_filename[:-4]+".pdf" # Меняем расширение на .pdf
         # Преобразуем в PDF
